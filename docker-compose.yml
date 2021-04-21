@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+    nodeserver:
+        build: .
+        ports:
+            - "3000:3000"
+        environment:
+            - PORT=3000
+    cassandra:
+        image: cassandra
+        ports:
+            - "9042:9042"
